@@ -3,8 +3,7 @@ import './Footer.css'
 import {FaFacebookSquare} from 'react-icons/fa'
 import {AiOutlineTwitter} from 'react-icons/ai'
 import {AiFillInstagram} from 'react-icons/ai'
-import {BsArrowBarRight} from 'react-icons/bs'
-import {BsArrowBarLeft} from 'react-icons/bs'
+
 
 
 
@@ -23,9 +22,9 @@ const Footer = () => {
         </ul>
 
         <div className="footer__socials">
-           <a href="https://www.facebook.com/nofil.bashir.7" target='_blank'><FaFacebookSquare/></a>
-          <a href="https://twitter.com/bashirnofil" target='_blank'><AiOutlineTwitter/></a>
-          <a href="https://www.instagram.com/nofilbashir/" target='_blank'><AiFillInstagram/></a>
+           <a href="https://www.facebook.com/nofil.bashir.7" target='_blank' rel="noreferrer"><FaFacebookSquare/></a>
+          <a href="https://twitter.com/bashirnofil" target='_blank' rel="noreferrer"><AiOutlineTwitter/></a>
+          <a href="https://www.instagram.com/nofilbashir/" target='_blank' rel="noreferrer"><AiFillInstagram/></a>
         </div>
 
       </footer>

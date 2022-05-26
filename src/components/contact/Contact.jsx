@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import './Contact.css'
 import {HiOutlineMail} from 'react-icons/hi'
-import {RiMessengerLine} from 'react-icons/ri'
 import {AiOutlineWhatsApp} from 'react-icons/ai'
 import { useRef, useState} from 'react';
 import emailjs from 'emailjs-com';
@@ -44,7 +43,7 @@ const Contact = () => {
   };
 
   useEffect(()=>{
-    if (!sent==''){
+    if (!sent===''){
       setTimeout(()=>{
         setSent((prev)=>{
           return ''
@@ -64,14 +63,14 @@ const Contact = () => {
         <HiOutlineMail className='contact__option-icon'/>
         <h4>Email</h4>
         <h5>nofil.bashiir@gmail.com</h5>
-        <a href="mailto:nofil.bashiir@gmail.com" target="_blank">Send a message</a>
+        <a href="mailto:nofil.bashiir@gmail.com" target="_blank" rel="noreferrer">Send a message</a>
         </article>
 
         <article className='contact__option'>
         <AiOutlineWhatsApp className='contact__option-icon'/>
         <h4>Whatsapp</h4>
         <h5>+92 305 4106689</h5>
-        <a href="https://wa.me/923054106689" target="_blank">Send a message</a>
+        <a href="https://wa.me/923054106689" target="_blank" rel="noreferrer">Send a message</a>
         </article>
       </div>
       <form ref={form}>

@@ -1,6 +1,5 @@
 import React from 'react'
 import './Portfolio.css'
-import IMG from '../../assets/portfolio1.png'
 
 const Portfolio = () => {
 
@@ -59,14 +58,14 @@ const Portfolio = () => {
       return(
       <article className='portfolio__items' key={obj.id}>
         <div className='portfolio__item-image'>
-          <a href={obj.viewProject} target='_blank'>
+          <a href={obj.viewProject} target='_blank' rel="noreferrer">
             <img src={obj.image} alt="" />
           </a>
          </div>
           <h3>{obj.name}</h3>
           <div className="portfolio__items-cta">
-          <a className='btn' href={obj.githubLink} target='_blank'>Code</a>
-          <a className='btn btn-primary' href={obj.viewProject} target='_blank'>View Project</a>
+          <a className='btn' href={obj.githubLink} target='_blank' rel="noreferrer">Code</a>
+          <a className='btn btn-primary' href={obj.viewProject} target='_blank' rel="noreferrer">View Project</a>
           </div>
       </article>
       )

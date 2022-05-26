@@ -54,7 +54,7 @@ const darkTheme = {
 
 const applyTheme = () => {
   if(toogleTheme===false){
-      Object.keys(lightTheme).map(key => {
+      Object.keys(lightTheme).forEach(key => {
 
     console.log(key)
     const value = lightTheme[key];
@@ -66,7 +66,7 @@ const applyTheme = () => {
 
 
     else {
-        Object.keys(darkTheme).map(key => {
+        Object.keys(darkTheme).forEach(key => {
 
     console.log(key)
     const value = darkTheme[key];
@@ -107,7 +107,7 @@ const applyTheme = () => {
         <HeaderSocials/>
 
        <div className="me">
-         <img src={ME} alt="Nofil bashir's image" />
+         <img src={ME} alt="" />
        </div>
 
       
