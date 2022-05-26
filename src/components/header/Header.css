@@ -1,0 +1,225 @@
+header{
+    height: 100vh;
+    padding-top: 7rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.header__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+
+}
+
+.theme_toogle{
+    position: absolute;
+        right: 3rem;
+        top: 1rem;
+
+    
+}
+
+
+
+/* ========from here */
+.checkbox {
+    opacity: 0;
+    position: absolute;
+  
+}
+
+.label {
+    width: 50px;
+    height: 26px;
+    background-color: var(--color-primary);
+    display: flex;
+    border-radius: 50px;
+    align-items: center;
+
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 5px;
+    position: relative;
+    transform: scale(1.5);
+
+}
+
+.ball {
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-white);
+    position: absolute;
+    top: 2.7px;
+    left: 3.8px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+    
+}
+
+/*  target the elemenent after the label*/
+.checkbox:checked+.label .ball {
+    transform:  translateX(22px);
+}
+
+.fa-moon {
+    color: var(--color-white);
+    
+
+}
+.fas{
+    padding-top: 0.3rem;
+}
+
+.fa-sun {
+    color: yellow;
+}
+
+
+/* to here */
+
+.header__cube{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.header__container h1{
+    font-family: 'Share', cursive;
+        font-size: 2rem;
+        font-weight: 400;
+        margin:0.7rem 0 1rem 0;
+}
+
+.cta{
+  margin-top :2.5rem;
+  display: flex;
+  gap:1.2rem;
+  justify-content: center;
+
+}
+
+
+/* =================== Header__Socials ================ */
+
+.Header__socials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:0.8rem;
+    position: absolute;
+    left: 11%;
+    bottom: 3rem;
+    padding: 1rem;
+
+}
+
+.Header__socials::after{
+    content: '';
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary);
+    
+}
+
+/* ================ ME ================= */
+
+.me{
+    background:linear-gradient(var(--color-primary), transparent);
+    width: 22rem;
+    height: 30rem;
+    /* position: absolute;
+    top: 35%;
+    left: calc(50%-11rem); */
+    margin-top:4rem;
+    border-radius: 12rem 12rem 0 0;
+    overflow: hidden;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    
+}
+
+.scroll__down{
+    position:absolute;
+    right:-2.5rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 0.9rem;
+
+}
+
+
+
+/* ================== MEDIA QUERIES (MEDIUM DEVICES) ===========*/
+
+@media screen and (max-width:1024px) {
+    .header {
+        height: 68vh;
+    }
+
+    .Header__socials {
+        position: absolute;
+        left: 4%;
+        bottom: 3rem;
+        padding: 1rem;
+
+    }
+}
+
+/* ================== MEDIA QUERIES (MEDIUM DEVICES) ===========*/
+
+@media screen and (max-width:600px) {
+    .header{
+        height: 100vh;
+    }
+    .Header__socials {
+       display: none;
+
+    }
+
+
+}
+
+@media screen and (max-width:380px) {
+ .cta{
+     font-size: 0.75rem;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .me{
+     width: 90%;
+ }
+
+}
+
+
+@media screen and (max-width:280px) {
+    .container {
+        width: 100%
+    }
+
+    .section>h2 {
+        margin-bottom: 2rem;
+    }
+
+    .floting_Navigation {
+        padding: 0;
+
+    }
+
+    .cta {
+        margin-top: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+        justify-content: center;
+    }
+
+    .cta a {
+       width: 100%;
+    }
+}
