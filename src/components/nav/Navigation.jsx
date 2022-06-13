@@ -1,4 +1,5 @@
-import React,{useState} from 'react'
+import React,{useState, useContext} from 'react'
+import { AppContext } from '../../contexts/AppContexts'
 import './Navigation.css'
 import {CgHomeAlt} from 'react-icons/cg'
 import {AiOutlineUser} from 'react-icons/ai'
@@ -11,10 +12,8 @@ import {BiMessageSquareDots} from 'react-icons/bi'
 
 const Navigation = () => {
 
-  const [activeNav, setActiveNav] = useState('#')
-
+  const {activeNav, setActiveNav} = useContext(AppContext)
   
-
   return (
    <nav className='floting_Navigation'>
      

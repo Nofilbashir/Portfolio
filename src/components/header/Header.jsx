@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React,{useState, useContext} from 'react'
+import { AppContext } from '../../contexts/AppContexts'
 import './Header.css'
 import CV from '../../assets/CV.pdf'
 import ME from '../../assets/me9.png'
@@ -13,6 +14,7 @@ import {IoMdMoon} from 'react-icons/io'
 const Header = () => {
 
   const [toogleTheme, setToogleTheme] = useState(true)
+  const {activeNav, setActiveNav} = useContext(AppContext)
 
   const lightTheme = {
   "--color-bg": "#f5f3f4",
@@ -101,7 +103,7 @@ const applyTheme = () => {
        
        <div className='cta'>
          <a href={CV} download className='btn'>Download Resume</a>
-         <a href="#contact" className='btn btn-primary'>Lets's Talk</a>
+         <a href="#contact" className='btn btn-primary' onClick={()=>{setActiveNav('#contact')}}>Lets's Talk</a>
        </div>
 
         <HeaderSocials/>
